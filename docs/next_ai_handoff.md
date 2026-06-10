@@ -45,13 +45,25 @@ Image-generation requirement:
 
 ## Immediate Next Tasks
 
-1. Collect original player reference images for the 20 sample-priority characters first:
-   `ZywOo`, `Aleksib`, `donk`, `m0NESY`, `FalleN`, `XANTARES`, `arT`, `torzsi`, `bLitz`, `Snax`, `Jame`, `HooXi`, `lauNX`, `SunPayus`, `frozen`, `npl`, `AW`, `biguzera`, `insani`, `dgt`.
-2. Start with ZywOo/Zyvo and regenerate only that one until the visual anchor passes:
+1. Finish the Web ChatGPT login/MFA flow in an isolated tab, then continue the same session without reopening.
+2. Collect original player reference images for the 20 sample-priority characters first:
+   `ZywOo`, `Aleksib`, `donk`, `m0NESY`, `FalleN`, `XANTARES`, `arT`, `torzsi`, `bLitz`, `Snax`, `Jame`, `HooXi`, `lauNX`, `SunPayus`, `frozen`, `npl`, `AW`, `biguzera`, `insani`, `dgt`, `YEKINDAR` (and their 20th mapped sample, if not already added).
+3. Start with ZywOo/Zyvo and regenerate only that one until the visual anchor passes:
    chubbier/rounder, glasses, curly hair, gentle silent French AWP aura.
 3. Save side-by-side comparison in `assets/comparisons/Vitality/Zyvo/current_comparison.png`.
 4. Save accepted generation in `assets/generated/Vitality/Zyvo/current.png`, replacing the deprecated draft only after acceptance.
 5. Update `data/visual_reference_requirements.csv` comparison status from `missing_original_reference` to `passed` or `needs_revision`.
+
+## Current Run Result (2026-06-10)
+
+- New browser tab for `https://chatgpt.com/` was previously used for a focused Zyvo rebuild and produced `assets/generated/Vitality/Zyvo/current.png`.
+- `data/players.csv` was updated to `generated_current` for Zyvo.
+- In this current continuation attempt, ChatGPT was reached at the login screen (`登录即可开始聊天`), not an authenticated chat state, so no further samples could be generated without re-authentication in the new browser session.
+- Note: avoid clicking the microphone/voice action (`启动语音功能`)—it can capture UI focus and prevent deterministic submit via script. Use direct composer content fill + submit button interaction; always include an Enter fallback if UI submit state is unstable.
+
+## Immediate Next Operational Step
+
+- Authenticate the current `iab` browser session once in this tab (keep it open), then resume from `prompts/web_batch_queue.md` at `Alek-C` (Aleksib) and continue downward.
 
 ## Do Not Do
 

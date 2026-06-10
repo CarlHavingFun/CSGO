@@ -68,7 +68,7 @@ zywoo = next(row for row in players if row['real_nickname'] == 'ZywOo')
 for bit in ['chubbier', 'glasses', 'curly']:
     assert bit in zywoo['reference_visual_anchor'], f'ZywOo visual anchor missing {bit}'
 
-sample_players = [row for row in players if row['image_status'].startswith('sample')]
+sample_players = [row for row in players if row['image_status'].startswith('sample') or row['image_status'].startswith('generated')]
 assert len(sample_players) == 20, f'expected 20 sample-priority players, got {len(sample_players)}'
 
 generated_root = root / 'assets' / 'generated'

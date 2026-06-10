@@ -11,6 +11,7 @@ Required behavior:
 - Open a new browser window or a new ChatGPT tab.
 - If using browser automation, create a fresh tab and verify it is not the currently active generation page.
 - Do not navigate, refresh, close, or type into an existing ChatGPT page unless the user explicitly points to it.
+- Never click/start any voice input control (microphone toolbar). Keep voice UI untouched for all future runs.
 
 ## Per-Character Inputs
 
@@ -70,3 +71,10 @@ For each final image:
 - Confirm the face is not a direct clone.
 - Confirm body/hair/accessory anchors survived.
 - Confirm 9:16 vertical composition works for short-drama editing.
+
+## Current Session Note
+
+- During continuation, the web flow reached OpenAI auth at `https://auth.openai.com/log-in/password` and then `https://auth.openai.com/mfa-challenge/...`.
+- Final generation can continue without changing this repo once a logged-in, MFA-verified ChatGPT session is available in this tab.
+- If a session is available, do not close this browser tab; continue from the same page to avoid losing queued context.
+- Submission contract: for each prompt, fill composer text and submit via **Send button click** first; if send button state is unstable, fallback to `Enter` key dispatch to avoid “no-enter” send failures.

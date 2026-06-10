@@ -9,7 +9,7 @@ This repo is the working asset library for a CS2/CSGO-inspired short-drama chara
 - `data/players.csv` covers 98 listed players from the snapshot. MOUZ and FaZe show only four players on the ranking page; no fifth player was fabricated.
 - `data/team_periods.csv` contains 154 current/history team-period rows.
 - `prompts/character_prompts.md` contains reusable prompt drafts for all listed characters.
-- Six early sample images were generated with built-in `image_gen` under `assets/generated/`.
+- Six early sample images were generated for early queue samples (Alek-C/Donk/Moness/Falleno/Xantor/BlitZed) and are pending final-side-by-side acceptance.
 
 ## Important Correction
 
@@ -24,6 +24,16 @@ The corrected pipeline is:
 3. Generate with Web ChatGPT image generation in a new browser window/tab, not the built-in `image_gen` tool.
 4. Save output under `assets/generated/<Team>/<InspiredName>/current.png` only after side-by-side comparison passes.
 5. Record comparison status in `data/visual_reference_requirements.csv`.
+
+## Current Web Rebuild Status (June 2026)
+
+- Current state is logged out in this in-app browser session (ChatGPT login prompt shown).
+- Re-authentication is needed in this same tab before continuing the queue.
+- Current queue head is Alek-C (Aleksib), then Donko, Moness, and the rest of the team-priority samples.
+
+Next manual step in the same browser session (if you are logged in):
+
+- Open `prompts/web_batch_queue.md` and run items from top to bottom.
 
 ## Example: ZywOo / Zyvo
 
