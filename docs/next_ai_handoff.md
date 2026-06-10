@@ -30,8 +30,8 @@ Use Web ChatGPT image generation, not built-in `image_gen`, for final character 
 
 Browser safety requirement:
 
-- Open a new browser window or new ChatGPT tab.
-- Do not reuse or disturb any existing ChatGPT/image-generation page the user has running.
+- Prefer using one fresh ChatGPT tab in the current in-app browser session.
+- Do not reuse or disturb any other running ChatGPT/image-generation page the user has open.
 - Keep each generation conversation clearly named or separated if the UI supports it.
 
 Image-generation requirement:
@@ -58,12 +58,14 @@ Image-generation requirement:
 
 - New browser tab for `https://chatgpt.com/` was previously used for a focused Zyvo rebuild and produced `assets/generated/Vitality/Zyvo/current.png`.
 - `data/players.csv` was updated to `generated_current` for Zyvo.
-- In this current continuation attempt, ChatGPT was reached at the login screen (`登录即可开始聊天`), not an authenticated chat state, so no further samples could be generated without re-authentication in the new browser session.
-- Note: avoid clicking the microphone/voice action (`启动语音功能`)—it can capture UI focus and prevent deterministic submit via script. Use direct composer content fill + submit button interaction; always include an Enter fallback if UI submit state is unstable.
+- In this continuation check, the in-app browser tab shows the ChatGPT onboarding/login flow with only auth-entry buttons (`使用 Google 账户继续`, `使用 Apple 账户继续`, `使用电话号码继续`, `继续`) and no visible composer/contenteditable field.
+- No generation can continue until that tab is in a logged-in chat state.
+- Note: avoid clicking the microphone/voice action (`启动语音功能`)—it can capture UI focus and break deterministic submit. Use direct composer submission (Send button first, Enter as fallback).
 
 ## Immediate Next Operational Step
 
 - Authenticate the current `iab` browser session once in this tab (keep it open), then resume from `prompts/web_batch_queue.md` at `Alek-C` (Aleksib) and continue downward.
+- Queue head remains `Alek-C`, followed by `Donko`, `Moness`, `Falleno`, and the rest of the sample-priority list.
 
 ## Do Not Do
 

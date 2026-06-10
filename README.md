@@ -27,8 +27,8 @@ The corrected pipeline is:
 
 ## Current Web Rebuild Status (June 2026)
 
-- Current state is logged out in this in-app browser session (ChatGPT login prompt shown).
-- Re-authentication is needed in this same tab before continuing the queue.
+- Current in-app browser check still reaches the ChatGPT onboarding/login flow (`开始使用 | ChatGPT`) with no visible chat composer.
+- Re-authentication/login is needed in this same tab before queue generation can continue.
 - Current queue head is Alek-C (Aleksib), then Donko, Moness, and the rest of the team-priority samples.
 
 Next manual step in the same browser session (if you are logged in):
